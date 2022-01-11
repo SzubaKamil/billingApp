@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headfragment">
+
+    <meta charset="UTF-8">
+    <title>Mój prąd</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css" integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
+
+    <style>
+        .width-205 {
+            width: 205px;
+        }
+    </style>
+
+    <style>
+        .hr {
+            background-color: bisque;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div th:fragment="bottomUserMenu">
+    <br>
+    <hr class="hr">
+    <a class="btn btn-success width-205" href="/backToHome">Powrót</a>
+    <br><br>
+    <a class="btn btn-success width-205" href="/logout">Wyloguj</a>
+</div>
+
+</body>
+
+</html>

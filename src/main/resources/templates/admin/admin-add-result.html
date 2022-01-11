@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel administratora - Nowy Klient </h3>
+
+<hr class="hr">
+
+<div th:if="*{saved}">
+    <h2 class="text-success">Nowy użytkownik został dodany pomyślnie.</h2>
+    <a th:text="*{user.getName() + ' ' + user.getSurname()}"></a>
+    <br>
+    <a th:text="*{'Login: ' + user.getLogin()}"></a>
+    <br>
+    <a th:text="*{'Hasło: ' + user.getPasswd()}"></a>
+
+</div>
+
+<div th:unless="*{saved}">
+    <h2 class="text-warning">Nie udało się dodać nowe użytkownika !!!</h2>
+</div>
+
+<div th:replace="fragments/general.html :: bottomUserMenu"/>
+
+</body>
+</html>

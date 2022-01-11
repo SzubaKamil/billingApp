@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel operatora - Odczyt licznika</h3>
+
+<hr class="hr">
+
+<form action="addRead" modelAttribute="meter">
+    <h5>ID Licznika</h5>
+    <input class="btn btn-light" type="text"  th:field="*{meter.id}" >
+    <br>
+    <h5>Stan Licznika</h5>
+    <input class="btn btn-light" type="text"  th:field="*{meter.value}">
+    <br><br>
+    <input class="btn btn-success width-205" type="submit" value="Dodaj"/>
+</form>
+
+<div th:replace="fragments/general.html :: bottomUserMenu"/>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel operatora - Lista liczników</h3>
+
+<hr class="hr">
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Ostatni odczyt</th>
+    </tr>
+
+    <th:block th:each="meter : ${meters}">
+        <tr>
+            <th class="id" th:text="${meter.id}" th:width="50"></th>
+            <th class="name" th:text="${meter.value}" th:width="200"></th>
+        </tr>
+    </th:block>
+</table>
+
+<div th:replace="fragments/general.html :: bottomUserMenu"/>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel administratora - Nowy Klient </h3>
+
+<hr class="hr">
+
+<form action="addUser" modelAttribute="user">
+    <input class="btn btn-light" type="text" placeholder="Imie"  th:field="*{user.name}" >
+    <br><br>
+    <input class="btn btn-light" type="text" placeholder="Nazwisko"  th:field="*{user.surname}" >
+    <br><br>
+    <input class="btn btn-light" type="text" placeholder="Adres" th:field="*{user.address}" >
+    <h5>Telefon:</h5>
+    <input class="btn btn-light" type="text" th:field="*{user.phone}">
+    <h5>Cena zgodnie z umową</h5>
+    <input class="btn btn-light" type="text"  th:field="*{user.contractCost}">
+    <br>
+    <input class="btn btn-success width-205" type="submit" value="Dodaj"/>
+</form>
+
+<hr class="hr">
+<br>
+<a class="btn btn-success width-205" href="/logout">Wyloguj</a>
+</body>
+</html>

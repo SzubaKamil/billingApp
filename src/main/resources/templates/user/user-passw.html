@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel użytkownika - Zmiana Hasła</h3>
+
+<hr class="hr">
+
+<form action="changePassw" modelAttribute="passwordModel">
+    <input class="btn btn-light" type="text" placeholder="Nowe Hasło" th:field="*{passwordModel.pass}" >
+    <br><br>
+    <input class="btn btn-light" type="text" placeholder="Powtórz Haslo" th:field="*{passwordModel.passw2}" >
+    <br><br>
+    <input class="btn btn-success width-205" type="submit" value="Zmień hasło"/>
+</form>
+
+<div th:replace="fragments/general.html :: bottomUserMenu"/>
+
+</body>
+
+</html>

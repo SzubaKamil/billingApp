@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel użytkownika - Lista Faktur</h3>
+
+<hr class="hr">
+
+<table>
+    <tr>
+        <th>Numer FV</th>
+        <th>Odczyt Początkowy</th>
+        <th>Odczyt Końcowy</th>
+        <th>Cena</th>
+        <th>Nr licznika</th>
+    </tr>
+
+    <th:block th:each="invoice : ${invoices}">
+            <th class="id" th:text="${invoice.id}" th:width="100"></th>
+            <th class="name" th:text="${invoice.initialValue}" th:width="150"></th>
+            <th class="name" th:text="${invoice.endValue}" th:width="150"></th>
+            <th class="name" th:text="${invoice.price}" th:width="100"></th>
+            <th class="name" th:text="${invoice.meter_id}" th:width="100"></th>
+        </tr>
+    </th:block>
+</table>
+
+<div th:replace="fragments/general.html :: bottomUserMenu"/>
+
+</body>
+</html>

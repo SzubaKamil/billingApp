@@ -1,0 +1,5 @@
+CREATE USER 'billing'@'localhost' IDENTIFIED BY 'billing';
+
+GRANT ALL PRIVILEGES ON * . * TO 'billing'@'localhost';
+
+ALTER USER 'billing'@'localhost' IDENTIFIED WITH mysql_native_password BY 'billing';

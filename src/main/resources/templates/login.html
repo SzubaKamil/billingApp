@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/general.html :: headfragment">
+
+</head>
+
+<body>
+
+<h2>APLIKACJA MOJ PRĄD</h2>
+<h3>Panel logowania</h3>
+
+<hr class="hr">
+
+<form method="post">
+    <input class="btn btn-light" type="text" placeholder="Login" th:field="*{userModel.login}">
+    <input class="btn btn-light" type="password" placeholder="Hasło" th:field="*{userModel.passwd}">
+    <input class="btn btn-success" type="submit" value="Zaloguj">
+</form>
+
+</body>
+
+</html>
