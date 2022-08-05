@@ -1,5 +1,5 @@
 # billingApp
-Simple billing application
+Simple web billing application
 
 # Basic Overview:
 Billing application for an energy company. Supports input customer data, adding meters and their data and issuing invoices.
